@@ -4,3 +4,5 @@ Description=Screen Grabber timer
 [Timer]
 OnCalendar=*-*-* *:*/10:00
 
+[Install]
+WantedBy=screengrabber.service
