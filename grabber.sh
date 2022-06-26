@@ -21,17 +21,32 @@
 
 # Put Code Below this Line
 
-# Current Time #
-currentTime = "CurrentTime"
+# Current Year #
+currentYear = $date "+%m"
+
+# Current Month #
+currentMonth = $date "+%m"
 
 # Current Day #
-currentDay = "CurrentDay"
+currentDay = $date "+%D"
 
-# Type Group Here #
-group = "GroupName"
+# Current Time #
+currentTime = $date +"%r"
+
+# Check to see if a folder is already made for the current Day.
+# If folder is not found, create one. 
+if [ ! -d "/" $currentYear "/" $currentMonth "/" $currentDay ]; then
+  mkdir -p "/" $currentYear "/" $currentMonth "/" $currentDay;
+fi
+
+# Type Team Here #
+team = "Prime"
+
+# Name for the file where we will save the current Screen Grab #
+screenGrabName = $team "/" $currentYear "/" $currentMonth "/" $currentDay "/" $currentTime ".jpg"
 
 # Run the Image Grabber #
-curl --unix-socket /run/kvmd/ustreamer.sock http://localhost/snapshot -o /tmp/screen.jpg
+curl --unix-socket /run/kvmd/ustreamer.sock http://localhost/snapshot -o $screenGrabName
 
 # Place the Image into OneDrive #
 # This code needs modified #
