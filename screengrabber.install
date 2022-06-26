@@ -1,0 +1,9 @@
+post_install () {
+  echo "To use the Screen Grabber, run the following commands:"
+  echo "  systemctl enable screengrabber screengrabber.timer"
+  echo "  systemctl start screengrabber"
+}
+
+post_upgrade () {
+  post_install
+}
