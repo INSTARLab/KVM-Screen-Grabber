@@ -32,13 +32,13 @@ team="Prime"
 # Current PC Name #
 currentPC="3"
 
-# Current Date #
-currentDate=`date %Y/%m/%d`
+# Current Date in YYYY/MM/DD Format #
+currentDate=`date +%Y/%m/%d`
 
-# Current Time #
+# Current Time in HH:MM 24 Hour Clock Format #
 currentTime=`date +%R`
 
-# The Directory Where We Will Place the Screen Grab #
+# The Directory Where We Will Save the Screen Grab #
 saveDir="/"$overallFolder"/"$team"/"$currentPC"/"$currentDate"/"
 
 # Check to see if a folder is already made for the current Day.
