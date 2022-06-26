@@ -1,0 +1,6 @@
+[Unit]
+Description=Screen Grabber timer
+
+[Timer]
+OnCalendar=*-*-* *:*/10:00
+
