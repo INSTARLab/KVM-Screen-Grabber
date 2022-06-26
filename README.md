@@ -19,17 +19,5 @@ We want to store this in OneDrive in an appropriate folder so our Team Leads can
 There are some other existing applications we may consider using, such as RClone: https://rclone.org/onedrive/
 
 
-Extra Tips:
-We want to dynamically get the current Date & Current Time to make subfolders for our content organization. We also want the screen.jpg file to be renamed to the appropriate current time so screen.jpg becomes 0835pm.jpg and will sit inside the appropriate folder such at /Prime/PC1 where "Prime" is the Group and "PC1" is the name of the PC the KVM is attached to.
-
-That might include code like the following:
-var $currentDate = (find code)
-curl --unix-socket /run/kvmd/ustreamer.sock http://localhost/snapshot  -X PUT -d @/Prime/PC1/$currentDate+.jpg -H "Authorization: bearer access_token_here"
-
  
  
-The end result will be in OneDrive and look something like this:
-/Prime/PC1/Jun26/0830pm.jpg
-/Prime/PC1/Jun26/0840pm.jpg
-/Prime/PC1/Jun26/0850pm.jpg
-/Prime/PC1/Jun26/0900pm.jpg
