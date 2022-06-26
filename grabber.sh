@@ -20,3 +20,21 @@
 # OR OTHER DEALINGS IN THE SOFTWARE.
 
 # Put Code Below this Line
+
+# Current Time #
+currentTime = "CurrentTime"
+
+# Current Day #
+currentDay = "CurrentDay"
+
+# Type Group Here #
+group = "GroupName"
+
+# Run the Image Grabber #
+curl --unix-socket /run/kvmd/ustreamer.sock http://localhost/snapshot -o /tmp/screen.jpg
+
+# Place the Image into OneDrive #
+# This code needs modified #
+# Documentation available here: https://developer.microsoft.com/en-us/onedrive #
+# curl https://graph.microsoft.com/v1.0/me/drive/root:/document1.docx:/content -X PUT -d @document1.docx -H "Authorization: bearer access_token_here"
+
