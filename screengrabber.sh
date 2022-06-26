@@ -63,5 +63,5 @@ curl --unix-socket /run/kvmd/ustreamer.sock http://localhost/snapshot -o $screen
 # This code needs modified #
 # Documentation available here: https://developer.microsoft.com/en-us/onedrive #
 # curl https://graph.microsoft.com/v1.0/me/drive/root:/document1.docx:/content -X PUT -d @document1.docx -H "Authorization: bearer access_token_here"
-# curl screenGrabName -X PUT -d @document1.docx -H "Authorization: bearer access_token_here" 
+# curl $screenGrabName -X PUT -d @document1.docx -H "Authorization: bearer access_token_here" 
 
