@@ -21,6 +21,9 @@
 
 # Put Code Below this Line
 
+# Overall Folder Name #
+overallFolder = "screengrabs"
+
 # Current Year #
 currentYear = $date "+%m"
 
@@ -35,8 +38,8 @@ currentTime = $date +"%r"
 
 # Check to see if a folder is already made for the current Day.
 # If folder is not found, create one. 
-if [ ! -d "/" $currentYear "/" $currentMonth "/" $currentDay ]; then
-  mkdir -p "/" $currentYear "/" $currentMonth "/" $currentDay;
+if [ ! -d "/" $overallFolder "/" $currentYear "/" $currentMonth "/" $currentDay ]; then
+  mkdir -p "/" $overallFolder "/" $currentYear "/" $currentMonth "/" $currentDay;
 fi
 
 # Type Team Here #
