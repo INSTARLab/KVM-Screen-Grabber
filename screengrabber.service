@@ -1,7 +1,7 @@
 # screengrabber.service
 [Unit] 
 Description= Grab a Screenshot 
-Documentation= https://github.com/INSTARLab/kvmgrabber 
+Documentation= https://github.com/INSTARLab/KVM-Screen-Grabber
 
 [Service] 
 Type= simple 
