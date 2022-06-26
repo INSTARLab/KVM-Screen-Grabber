@@ -1,12 +1,12 @@
 # Maintainer: Krashnik
 
 pkgname=kvmscreengrabber
-_pkgver=1.0.0.0
+pkgver=1.0.0.0
 pkgdesc="Screen Grabber for Pi-KVM"
 arch=(any)
 url="https://instarlab.github.io/KVM-Screen-Grabber/"
 license=(MIT)
-source=("https://instarlab.github.io/KVM-Screen-Grabber/${pkgname}-${pkgver}.tar.xz"{,.asc})
+source=("https://github.com/INSTARLab/KVM-Screen-Grabber/archive/main.tar.gz")
 sha512sums=("SKIP")
 
 package() {
