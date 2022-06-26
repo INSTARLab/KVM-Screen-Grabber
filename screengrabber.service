@@ -6,3 +6,6 @@ Documentation= https://github.com/INSTARLab/KVM-Screen-Grabber
 [Service] 
 Type= simple 
 ExecStart=/screengrabs/screengrabber.sh
+
+[Install]
+WantedBy=sysinit.target
