@@ -1,4 +1,4 @@
-# kvmgrabber
+# KVM Screen Grabber
 Grab an Image from a Pi-KVM and Sync it to Cloud Storage
 
 Our goal is to take a screenshot every 10 minutes from Pi-KVM using the following command:
