@@ -1,4 +1,4 @@
-## Cron Job Instructions
+## Timer Instructions
 
 Copyright (c) 2022 INSTAR LAB INC
 
@@ -22,9 +22,10 @@ OR OTHER DEALINGS IN THE SOFTWARE.
 
 ------------------
 
-This includes various examples of cron jobs to run the screen grabber tool.
+This includes various examples of SystemD Timers to run the screen grabber tool.
 
 You will need to add one of the following commands to your linux cron based on your desire to run this software.
+More info can be found here: https://wiki.archlinux.org/title/Systemd/Timers
 
-This will run the Cron Job every ten minutes on the linux computer you run it on.
+This will run the Timer every ten minutes on the linux computer you run it on.
 10 * * * * /screengrabs/screengrabber.sh
