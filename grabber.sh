@@ -22,31 +22,37 @@
 # Put Code Below this Line
 
 # Overall Folder Name #
-overallFolder = "screengrabs"
-
-# Current Year #
-currentYear = $date "+%m"
-
-# Current Month #
-currentMonth = $date "+%m"
-
-# Current Day #
-currentDay = $date "+%D"
-
-# Current Time #
-currentTime = $date +"%r"
+overallFolder="screengrabs"
 
 # Type Team Here #
-team = "Prime"
+team="Prime"
+
+# Current PC Name #
+currentPC="3"
+
+# Current Year #
+currentYear=`date +%Y`
+
+# Current Month #
+currentMonth=`date +%m`
+
+# Current Day #
+currentDay=`date +%d`
+
+# Current Time #
+currentTime=`date +%H:%M%p`
+
+# The Directory Where We Will Place the Screen Grab #
+thisDir="/"$overallFolder"/"$team"/"$currentPC"/"$currentYear"/"$currentMonth"/"$currentDay"/"
 
 # Check to see if a folder is already made for the current Day.
 # If folder is not found, create one. 
-if [ ! -d "/" $overallFolder "/" $team "/" $currentYear "/" $currentMonth "/" $currentDay ]; then
-  mkdir -p "/" $overallFolder "/" $team "/" $currentYear "/" $currentMonth "/" $currentDay;
+if [ ! -d $thisDir ]; then
+  mkdir -p $thisDir;
 fi
 
 # Name for the file where we will save the current Screen Grab #
-screenGrabName =  "/" $overallFolder "/" $team "/" $currentYear "/" $currentMonth "/" $currentDay "/" $currentTime ".jpg"
+screenGrabName=$thisDir$currentTime".jpg"
 
 # Run the Image Grabber #
 curl --unix-socket /run/kvmd/ustreamer.sock http://localhost/snapshot -o $screenGrabName
