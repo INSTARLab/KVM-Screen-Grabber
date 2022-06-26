@@ -36,17 +36,17 @@ currentDay = $date "+%D"
 # Current Time #
 currentTime = $date +"%r"
 
-# Check to see if a folder is already made for the current Day.
-# If folder is not found, create one. 
-if [ ! -d "/" $overallFolder "/" $currentYear "/" $currentMonth "/" $currentDay ]; then
-  mkdir -p "/" $overallFolder "/" $currentYear "/" $currentMonth "/" $currentDay;
-fi
-
 # Type Team Here #
 team = "Prime"
 
+# Check to see if a folder is already made for the current Day.
+# If folder is not found, create one. 
+if [ ! -d "/" $overallFolder "/" $team "/" $currentYear "/" $currentMonth "/" $currentDay ]; then
+  mkdir -p "/" $overallFolder "/" $team "/" $currentYear "/" $currentMonth "/" $currentDay;
+fi
+
 # Name for the file where we will save the current Screen Grab #
-screenGrabName = $team "/" $currentYear "/" $currentMonth "/" $currentDay "/" $currentTime ".jpg"
+screenGrabName =  "/" $overallFolder "/" $team "/" $currentYear "/" $currentMonth "/" $currentDay "/" $currentTime ".jpg"
 
 # Run the Image Grabber #
 curl --unix-socket /run/kvmd/ustreamer.sock http://localhost/snapshot -o $screenGrabName
