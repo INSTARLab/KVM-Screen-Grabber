@@ -25,3 +25,6 @@ OR OTHER DEALINGS IN THE SOFTWARE.
 This includes various examples of cron jobs to run the screen grabber tool.
 
 You will need to add one of the following commands to your linux cron based on your desire to run this software.
+
+This will run the Cron Job every ten minutes on the linux computer you run it on.
+10 * * * * /screengrabs/screengrabber.sh
