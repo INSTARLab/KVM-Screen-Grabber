@@ -1,0 +1,8 @@
+# screengrabber.service
+[Unit] 
+Description= Grab a Screenshot 
+Documentation= https://github.com/INSTARLab/kvmgrabber 
+
+[Service] 
+Type= simple 
+ExecStart=/screengrabs/screengrabber.sh
