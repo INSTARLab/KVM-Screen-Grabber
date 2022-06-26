@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # The Screen Grabber Command that takes a screenshot and then sends to Cloud
 # Copyright (c) 2022 INSTAR LAB INC
 
