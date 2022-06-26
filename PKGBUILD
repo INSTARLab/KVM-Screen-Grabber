@@ -6,6 +6,7 @@ pkgdesc="Screen Grabber for Pi-KVM"
 arch=(any)
 url="https://instarlab.github.io/KVM-Screen-Grabber/"
 license=(MIT)
+install=screengrabber.install
 source=("https://github.com/INSTARLab/KVM-Screen-Grabber/archive/main.tar.gz")
 sha512sums=("SKIP")
 
